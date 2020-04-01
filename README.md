@@ -1,7 +1,7 @@
 # Batch-effect-removal-benchmarking
 Datasets and scripts used in article entitled "A benchmark of batch-effect correction methods for single-cell RNA sequencing data" (https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1850-9).
 
-The same files were also uploaded to https://hub.docker.com/repository/docker/jinmiaochenlab/batch-effect-removal-benchmarking
+The same files are also available at https://hub.docker.com/repository/docker/jinmiaochenlab/batch-effect-removal-benchmarking
 
 
 ## Docker installation
