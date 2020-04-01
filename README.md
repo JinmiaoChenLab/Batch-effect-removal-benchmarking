@@ -19,7 +19,7 @@ To download the data, please follow these steps:
 1. Go to target folder
 2. run ```sudo docker create --name batcheffect  jinmiaochenlab/batch-effect-removal-benchmarking``` to download docker image.
 3. run ```sudo docker cp batcheffect:/batch_effect/ ./``` to copy the data to current folder.
-4. run  ```sudo docker container rm batch_effect; docker image rm jinmiaochenlab/batch-effect-removal-benchmarking``` to delete docker image.
+4. run  ```sudo docker container rm batcheffect; docker image rm jinmiaochenlab/batch-effect-removal-benchmarking``` to delete docker image.
 4. If you are in "docker" group, then you don't need to use sudo.
 
 ### If you encounter any issue to install or run docker, please consult your system administrator. It will save you a lot of time.
