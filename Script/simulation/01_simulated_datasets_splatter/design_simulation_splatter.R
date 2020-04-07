@@ -106,37 +106,3 @@ sapply(1:dim(combi)[1],function(x){
   write.table(up_genes, file = paste0(base_name,"/true_up_genes.txt"), sep = "\t", row.names = TRUE, col.names = TRUE)
   
 })
-
-
-# # Heatmap DEGs before batch effect removing 
-# 
-# counts_hm <- t(counts)
-# colnames(counts_hm) <- paste(cellinfo[colnames(counts_hm),'Group'],colnames(counts_hm),sep="_")
-# pbmc <- CreateSeuratObject(raw.data = counts_hm, project = "simulated_data", min.cells = 0, min.features = 200)
-# pbmc
-# pbmc <- NormalizeData(object = pbmc, normalization.method = "LogNormalize", scale.factor = 1e2)
-# pbmc <- ScaleData(object = pbmc)
-# 
-# # 28/05/2019
-# png("heatmap_before_batch_effect_removing/20190528_DEG_GT_all_hm.png", width = 2*480, height = 2*480, res = 2*72)
-# gg <- DoHeatmap(object = pbmc, genes.use = genes_deg, slim.col.label = TRUE, group.label.rot =F,
-#                remove.key = FALSE,col.low = "#0000FF",col.mid = "#FFFFFF", col.high = "#FF0000")
-# # remove row labels 
-# gg <- gg + theme(axis.text.y = element_blank())
-# 
-# # b <- ggplot_build(gg)
-# # x_g1 <- median(seq(1:length(b$layout$panel_scales_x[[1]]$range$range)))
-# # x_g2 <- median(seq(1:length(b$layout$panel_scales_x[[2]]$range$range)))
-# x_g1 <- median(seq(1:length(pbmc@ident[pbmc@ident==levels(pbmc@ident)[1]])))
-# x_g2 <- median(seq(1:length(pbmc@ident[pbmc@ident==levels(pbmc@ident)[2]])))
-# y_g1 <- length(down_genes) + length(up_genes)/2
-# y_g2 <- length(down_genes)/2
-# 
-# annotate_text <- data.frame(cell = c(x_g1,x_g2), 
-#                    gene = c(y_g1,y_g2), 
-#                    expression = c(0,0), 
-#                    lab = c(length(up_genes),length(down_genes)),
-#                    ident = c("Group1","Group2"))
-# gg <- gg + geom_text(data=annotate_text, aes(x = cell, y = gene, label=lab),size=9)
-# print(gg)
-# dev.off()
