@@ -17,6 +17,11 @@ setwd(this.dir)
 # Ex: dataset3_simulation_v2/simul4_dropout_005_b1_80_b2_400/     small number of cells in 2 batches, small dropout
 # Ex: dataset3_simulation_v2/simul4_dropout_025_b1_80_b2_400/     small number of cells in 2 batches, large dropout
 
+dropout <- rep(c(0.05,0.25),times=3)
+b1 <- rep(c(500,500,80),each = 2)
+b2 <- rep(c(900,450,400),each = 2)
+combi <- data.frame(d=dropout,b1=b1,b2=b2)
+
 simulate <- function(nGroups=2, nGenes=5000, dropout=0.5, 
                      batchCells = c(400, 700), group.prob = c(0.3, 0.7),
                      de.prob = c(0.2, 0.1),
