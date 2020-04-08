@@ -35,8 +35,7 @@ seg <- segList$mouse$mouse_scSEG
 
 src_dir = "./"
 working_dir = "../../Output/"
-read_dir = "/batch_norm/datasets/dataset8_Mouse_brain/filtered_genes_and_cells/"
-#read_dir = "../../Data/"
+read_dir = "../../Data/dataset8/"
 
 expr_filename = "dropviz_and_nuclei_combined_filtered_UMI.RDS";
 cellinfo_filename = "dropviz_and_nuclei_combined_filtered_cell_info.txt"
