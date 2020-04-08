@@ -35,8 +35,7 @@ seg <- segList_ensemblGeneID$human$human_scSEG
 
 src_dir = "./"
 working_dir = "../../Output/"
-read_dir = "/batch_norm/datasets/dataset9_Human_cell_atlas/filtered_genes_and_cells/"
-#read_dir = "../../Data/"
+read_dir = "../../Data/dataset9/"
 
 expr_filename = "HCA_genes_cells_filtered_filtered_UMI.RDS";
 cellinfo_filename = "HCA_genes_cells_filtered_filtered_cell_info.txt"
