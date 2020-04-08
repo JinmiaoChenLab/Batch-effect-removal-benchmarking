@@ -35,8 +35,7 @@ seg <- segList$human$human_scSEG
 
 src_dir = "./"
 working_dir = "../../Output/"
-read_dir = "../../scbio4/home/koksiong/data/04/"
-#read_dir = "../../Data/"
+read_dir = "../../Data/dataset4"
 
 expr_mat_filename = "myData_pancreatic_5batches.txt"
 metadata_filename = "mySample_pancreatic_5batches.txt"
