@@ -5,17 +5,15 @@ rm(list=ls())
 
 library(splatter)
 
-this.dir <- "/acrc/jinmiao/CJM_lab/Marion/Project/Hoa_batch_normalization/simulation_dataset_V3/data/"
+this.dir <- "../../../Data/dataset3/"
 setwd(this.dir)
 
-# Get all datasets in dataset3_simulation_v2/ folders
-# Ex: dataset3_simulation_v2/ 
-# Ex: dataset3_simulation_v2/simul1_dropout_005_b1_500_b2_900/    unbalanced number of cells in 2 batches, small dropout
-# Ex: dataset3_simulation_v2/simul2_dropout_025_b1_500_b2_900/    unbalanced number of cells in 2 batches, large dropout
-# Ex: dataset3_simulation_v2/simul3_dropout_005_b1_500_b2_450/    balanced number of cells in 2 batches, small dropout
-# Ex: dataset3_simulation_v2/simul3_dropout_025_b1_500_b2_450/    unbalanced number of cells in 2 batches, large dropout
-# Ex: dataset3_simulation_v2/simul4_dropout_005_b1_80_b2_400/     small number of cells in 2 batches, small dropout
-# Ex: dataset3_simulation_v2/simul4_dropout_025_b1_80_b2_400/     small number of cells in 2 batches, large dropout
+# Ex: ./simul1_dropout_005_b1_500_b2_900/    unbalanced number of cells in 2 batches, small dropout
+# Ex: ./simul2_dropout_025_b1_500_b2_900/    unbalanced number of cells in 2 batches, large dropout
+# Ex: ./simul3_dropout_005_b1_500_b2_450/    balanced number of cells in 2 batches, small dropout
+# Ex: ./simul3_dropout_025_b1_500_b2_450/    unbalanced number of cells in 2 batches, large dropout
+# Ex: ./simul4_dropout_005_b1_80_b2_400/     small number of cells in 2 batches, small dropout
+# Ex: ./simul4_dropout_025_b1_80_b2_400/     small number of cells in 2 batches, large dropout
 
 dropout <- rep(c(0.05,0.25),times=3)
 b1 <- rep(c(500,500,80),each = 2)
