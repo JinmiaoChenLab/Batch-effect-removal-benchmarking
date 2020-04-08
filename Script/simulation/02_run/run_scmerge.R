@@ -6,14 +6,11 @@ library(scater)
 #BiocManager::install("scMerge")
 library(scMerge)
 
-this.dir <- '/scbio4/home/marion/Hoa_batch_normalization/simulation_dataset_V3/'
-setwd(this.dir)
-
-lsdir <- list.dirs('data', recursive=FALSE) 
+lsdir <- list.dirs('Data/dataset3', recursive=FALSE) 
 
 sapply(lsdir,function(x){
   
-  x2 <- gsub('data/','',x)
+  x2 <- gsub('Data/dataset3/','',x)
   dir.create(paste0('demo_scmerge/',x2), showWarnings = FALSE)
   
   selection <- c('HVG','all')
