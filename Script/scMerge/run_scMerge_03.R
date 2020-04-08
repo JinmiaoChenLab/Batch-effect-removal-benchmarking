@@ -31,8 +31,7 @@ outfile_prefix = "Dataset3"
 save_obj = F
 
 src_dir = "./"
-read_dir = "/scbio4/home/marion/Hoa_batch_normalization/simulation_dataset_V3/data"
-#read_dir = "../../Data/"
+read_dir = "../../Data/dataset3/"
 
 lsdir <- paste0(list.dirs(read_dir, recursive=FALSE),'/')
 
