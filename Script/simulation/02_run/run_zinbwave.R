@@ -1,8 +1,3 @@
-
-this.dir <- '/home/marion/Marion/Project/Hoa_batch_normalization/simulation_dataset_V3/'
-setwd(this.dir)
-
-source('demo_zinb_wave/ZINB_WaVE_analysis.R')
 library(fs)
 library(parallel)
 library(ezTools)
@@ -84,7 +79,8 @@ ZINB_WaVE_analysis = function(expression_data, cell_anno, base_name = 'project',
 # #### preprocessing ####
 base_name = basename(getwd())
 
-files = dir('data', '.*0$', full.names = T)
+data_dir = 'Data/dataset3/'
+files = dir('Data/dataset3/', '.*0$', full.names = T)
 
 all_rc_and_anno_list = lapply(1:length(files), function(i){
   if(is_file(files[i])){
@@ -110,8 +106,8 @@ all_rc_and_anno_list = lapply(1:length(files), function(i){
 names(all_rc_and_anno_list) = basename(files)
 all_rc_and_anno_list2 = all_rc_and_anno_list[!sapply(all_rc_and_anno_list, is.null)]
 saveRDS(all_rc_and_anno_list2, "all_rc_and_anno_list.RDS")
-
-all_rc_and_anno_list = fast_read_table('/acrc/jinmiao/CJM_lab/hoatran/demo_normalization/xiaomeng/ZINB_WaVE/dataset3_simulation_v2/analysis/all_rc_and_anno_list.RDS')
+#all_rc_and_anno_list = fast_read_table('/acrc/jinmiao/CJM_lab/hoatran/demo_normalization/xiaomeng/ZINB_WaVE/dataset3_simulation_v2/analysis/all_rc_and_anno_list.RDS')
+all_rc_and_anno_list = all_rc_and_anno_list2
 
 lapply(1:length(all_rc_and_anno_list), function(i){
   print(names(all_rc_and_anno_list)[i])
