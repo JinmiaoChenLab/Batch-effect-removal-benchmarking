@@ -2,10 +2,10 @@
 devtools::install_version(package = 'Seurat', version = package_version('2.3.4'))
 library(Seurat)
 
-this.dir <- '/home/marion/Marion/Project/Hoa_batch_normalization/simulation_dataset_V3/'
+this.dir <- '../../../Data/dataset3/'
 setwd(this.dir)
 
-lsdir <- list.dirs('data', recursive=FALSE) 
+lsdir <- list.dirs('./', recursive=FALSE) 
 
 sapply(lsdir,function(x){
   
