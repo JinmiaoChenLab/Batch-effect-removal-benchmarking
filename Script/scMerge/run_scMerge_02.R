@@ -35,8 +35,7 @@ seg <- segList$mouse$mouse_scSEG
 
 src_dir = "./"
 working_dir = "../../Output/"
-read_dir = "../../scbio4/home/koksiong/data/02/"
-#read_dir = "../../Data/"
+read_dir = "../../Data/Data/dataset2/"
 
 expr_filename = 'filtered_total_batch1_seqwell_batch2_10x.txt'
 metadata_filename = 'filtered_total_sample_ext_organ_celltype_batch.txt'
