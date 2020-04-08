@@ -37,8 +37,7 @@ seg = segList$human$human_scSEG
 
 src_dir = "./"
 working_dir = "../../Output/"
-read_dir = "../../scbio4/home/koksiong/data/01/"
-#read_dir = "../../Data/"
+read_dir = "../../Data/dataset1/"
 
 expr_filename = 'dataset1_sm_uc3.txt'
 metadata_filename = 'sample_sm_uc3.txt'
