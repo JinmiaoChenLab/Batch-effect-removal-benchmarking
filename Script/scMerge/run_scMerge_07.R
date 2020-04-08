@@ -37,8 +37,7 @@ seg <- segList$mouse$mouse_scSEG
 
 src_dir = "./"
 working_dir = "../../Output/"
-read_dir = "../../scbio4/home/koksiong/data/07/"
-#read_dir = "../../Data/"
+read_dir = "../../Data/dataset7"
 
 b1_exprs_filename = "b1_exprs.txt"
 b2_exprs_filename = "b2_exprs.txt"
