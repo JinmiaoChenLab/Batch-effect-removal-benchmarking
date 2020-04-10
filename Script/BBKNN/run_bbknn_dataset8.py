@@ -95,10 +95,6 @@ sc.pp.neighbors(adata1,n_pcs=num_pcs, n_neighbors=20)
 # adata_bbknn.write_h5ad(os.path.join(save_dir,'bbknn.h5ad'))
 # save_runtime(t1,t2,'bbknn')
 
-
-# In[14]:
-
-
 # # BBKNN uses adata.obs['batch'] by default to split the batches
 # # BBKNN also offers a trim parameter, which filters each cell's connections 
 # # to a user-specified number of highest connectivities. 
@@ -112,10 +108,6 @@ sc.pp.neighbors(adata1,n_pcs=num_pcs, n_neighbors=20)
 # sc.pl.umap(adata_bbknn_trim, color=color_group,save='bbknn_trim.png')
 # adata_bbknn_trim.write_h5ad(os.path.join(save_dir,'bbknn_trim.h5ad'))
 # save_runtime(t3,t4,'bbknn_trim')
-
-
-# In[15]:
-
 
 # Test different options and choose the best 
 # By default, BBKNN uses annoy to compute approximate neighbours. 
@@ -131,10 +123,6 @@ color_group = ["cell_type","batch"]
 sc.pl.umap(adata_bbknn_faiss, color=color_group,save='bbknn_faiss.png')
 adata_bbknn_faiss.write_h5ad(os.path.join(save_dir,'bbknn_faiss.h5ad'))
 save_runtime(t5,t6,'bbknn_faiss')
-
-
-# In[16]:
-
 
 # Test different options and choose the best 
 # ckdtree
