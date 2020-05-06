@@ -95,17 +95,17 @@ sapply(1:dim(combi)[1],function(x){
   truecounts <- sim$truecounts
   dropout <- sim$dropout
   
-  de_genes_ls <- rownames(geneinfo[(geneinfo$DEFacGroup1+geneinfo$DEFacGroup2)!=2,])
-  de_genes_df <- geneinfo[de_genes_ls,]
-  down_genes <- rownames(de_genes_df[de_genes_df$DEFacGroup1<de_genes_df$DEFacGroup2,])
-  up_genes <- de_genes_ls[!de_genes_ls %in% down_genes]
-  genes_deg <- c(up_genes, down_genes) 
+  #de_genes_ls <- rownames(geneinfo[(geneinfo$DEFacGroup1+geneinfo$DEFacGroup2)!=2,])
+  #de_genes_df <- geneinfo[de_genes_ls,]
+  #down_genes <- rownames(de_genes_df[de_genes_df$DEFacGroup1<de_genes_df$DEFacGroup2,])
+  #up_genes <- de_genes_ls[!de_genes_ls %in% down_genes]
+  #genes_deg <- c(up_genes, down_genes) 
   
   write.table(counts, file = paste0(base_name,"/counts.txt"), sep = "\t", row.names = TRUE, col.names = TRUE)
   write.table(truecounts, file = paste0(base_name,"/truecounts.txt"), sep = "\t", row.names = TRUE, col.names = TRUE)
   write.table(geneinfo, file = paste0(base_name,"/geneinfo.txt"), sep = "\t", row.names = TRUE, col.names = TRUE)
   write.table(cellinfo, file = paste0(base_name,"/cellinfo.txt"), sep = "\t", row.names = TRUE, col.names = TRUE)
-  write.table(down_genes, file = paste0(base_name,"/true_down_genes.txt"), sep = "\t", row.names = TRUE, col.names = TRUE)
-  write.table(up_genes, file = paste0(base_name,"/true_up_genes.txt"), sep = "\t", row.names = TRUE, col.names = TRUE)
+  #write.table(down_genes, file = paste0(base_name,"/true_down_genes.txt"), sep = "\t", row.names = TRUE, col.names = TRUE)
+  #write.table(up_genes, file = paste0(base_name,"/true_up_genes.txt"), sep = "\t", row.names = TRUE, col.names = TRUE)
   
 })
